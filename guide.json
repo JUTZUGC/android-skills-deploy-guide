@@ -1,0 +1,114 @@
+{
+  "owner": "JUTZUGC",
+  "code": "JUTZUGC",
+  "project": {
+    "key": "android-skills",
+    "nameCn": "Android Skills",
+    "repoName": "android-skills-deploy-guide",
+    "oneLiner": "9.9k stars，Apache-2.0，谷歌官方维护的 Android Agent 技能库，覆盖 Compose、相机、性能与上架",
+    "officialRepo": "https://github.com/android/skills",
+    "officialDocs": "https://developer.android.com/tools/agents/android-skills",
+    "stars": "9.9k",
+    "license": "Apache-2.0",
+    "highlights": [
+      "9.9k stars：谷歌官方仓库，2026-03 建仓",
+      "17 个主题：Compose、相机、媒体、导航、性能、Play、安全、测试、Wear、TV、XR 等",
+      "只做难的部分：官方明确不覆盖模型已经很擅长的领域",
+      "开放标准：遵循 agentskills.io 的 SKILL.md 规范",
+      "可用于 Claude Code / Codex / Gemini / Antigravity",
+      "Apache-2.0：可内部使用"
+    ],
+    "mcpSupport": "Android Skills 不是 MCP server，是 Agent 技能集合；本仓库只负责安装，不注册 MCP。",
+    "webuiUrl": "",
+    "adapterPorts": "",
+    "collectedAt": "2026-10-27",
+    "verification": [
+      [
+        "仓库元数据核对：9,929 stars、641 forks、Apache-2.0、2026-03-16 建仓",
+        "已核对 2026-10-27"
+      ],
+      [
+        "GitHub Trending 周榜 +873",
+        "已核对 2026-10-27"
+      ],
+      [
+        "仓库根目录确认 17 个技能目录（camera / performance / navigation / testing / play 等）",
+        "已核对 2026-10-27"
+      ],
+      [
+        "README 确认官方安装方式为 `android skills add --all`，也支持 Claude Code / Codex 插件市场",
+        "已核对 2026-10-27"
+      ],
+      [
+        "最新 release v1.0.18（2026-10-26），附带 android-skills.zip 1.3 MB",
+        "已核对 2026-10-27"
+      ],
+      [
+        "未实测技能在客户端内的触发效果",
+        "说明 2026-10-27"
+      ]
+    ],
+    "deploy": {
+      "type": "script",
+      "steps": [
+        "git clone --depth=1 https://github.com/android/skills.git",
+        "mkdir -p ~/.claude/skills",
+        "for d in skills/camera skills/performance skills/navigation skills/testing skills/play; do cp -R \"$d\" ~/.claude/skills/ 2>/dev/null; done",
+        "ls ~/.claude/skills | head -n 20",
+        "echo \"安装完成：在对话里直接提需求，Agent 会自动匹配技能\""
+      ],
+      "stepsPs": [
+        "git clone --depth=1 https://github.com/android/skills.git",
+        "New-Item -ItemType Directory -Force -Path \"$env:USERPROFILE\\.claude\\skills\" | Out-Null",
+        "foreach ($d in @('camera','performance','navigation','testing','play')) { if (Test-Path \"skills\\$d\") { Copy-Item -Recurse -Force \"skills\\$d\" \"$env:USERPROFILE\\.claude\\skills\\\" } }",
+        "Get-ChildItem \"$env:USERPROFILE\\.claude\\skills\" -Name | Select-Object -First 20",
+        "Write-Host '安装完成：在对话里直接提需求，Agent 会自动匹配技能'"
+      ],
+      "source": "https://github.com/android/skills#install-android-skills"
+    },
+    "pitfalls": [
+      "技能不生效：确认复制到了客户端读取的目录，而不是仓库目录",
+      "只装了一个：`android skills add` 默认只装 android-cli，要加 `--all`",
+      "复制后目录层级多一层：确保是 `skills/camera` 变成 `~/.claude/skills/camera`",
+      "客户端不识别：确认版本支持 SKILL.md 规范",
+      "内容过期：用 `android skills update --all` 或重新 clone",
+      "想改技能：Apache-2.0 允许，但公开贡献暂不接受"
+    ]
+  },
+  "gate": {
+    "allow": [
+      "dumate"
+    ],
+    "label": "百度搭子",
+    "url": "https://www.dumate.cn/",
+    "guideUrl": "https://github.com/JUTZUGC/android-skills-deploy-guide",
+    "howToFix": [
+      "1. 打开 https://www.dumate.cn/ ，下载并安装「百度搭子」电脑端（Windows / macOS）",
+      "2. 用账号登录",
+      "3. 在对话窗口发送：你好，帮我从 github 部署 JUTZUGC/android-skills-deploy-guide 到我的电脑上",
+      "4. 部署完成后，在同一对话窗口里继续使用"
+    ],
+    "hint": "请改用「百度搭子」部署后再使用；本工具没有网页版入口。",
+    "onError": "allow"
+  },
+  "keywords": [
+    "Android Skills 安装",
+    "安卓 AI 技能库",
+    "Android Agent 技能",
+    "Claude Code 安卓",
+    "Compose 最佳实践",
+    "Android 开发 规范",
+    "android skills add",
+    "谷歌 官方 技能库",
+    "AI 写安卓 代码",
+    "SKILL.md 安卓"
+  ],
+  "topics": [
+    "android",
+    "ai-agents",
+    "skills",
+    "kotlin",
+    "jetpack-compose",
+    "developer-tools"
+  ]
+}
