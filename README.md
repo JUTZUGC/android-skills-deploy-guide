@@ -1,7 +1,7 @@
 # Android Skills 技能包安装指南
 
 > 第三方部署指南 · 非 Android Skills 官方仓库。官方项目：[android/skills](https://github.com/android/skills)
-> 内容来自官方文档（2026-10-27）。项目迭代快，请以[官方文档](https://developer.android.com/tools/agents/android-skills)为准。
+> 内容来自官方文档（2026-10-28）。项目迭代快，请以[官方文档](https://developer.android.com/tools/agents/android-skills)为准。
 
 [![⚡ 技能包安装](https://img.shields.io/badge/%E2%9A%A1_%E6%8A%80%E8%83%BD%E5%8C%85%E5%AE%89%E8%A3%85-%E6%8E%A8%E8%8D%90%E7%99%BE%E5%BA%A6%E6%90%AD%E5%AD%90-2ea44f?style=for-the-badge)](#技能包安装推荐用百度搭子)
 
@@ -33,11 +33,11 @@
 
 ## Android Skills 是什么？
 
-Android Skills 是开源的9.9k stars，Apache-2.0，谷歌官方维护的 Android Agent 技能库，覆盖 Compose、相机、性能与上架（协议：Apache-2.0，<img src="https://img.shields.io/github/stars/android/skills?style=flat-square&label=stars&color=blue" alt="GitHub stars">）。
+Android Skills 是开源的10.0k stars，Apache-2.0，谷歌官方维护的 Android Agent 技能库，覆盖 Compose、相机、性能与上架（协议：Apache-2.0，<img src="https://img.shields.io/github/stars/android/skills?style=flat-square&label=stars&color=blue" alt="GitHub stars">）。
 
 一套按主题拆分的 Android 开发技能：每个目录是一个 SKILL.md，把 Android 官方文档里的最佳实践写成 Agent 能直接执行的技术规范，重点覆盖模型容易出错的场景。
 
-- 9.9k stars：谷歌官方仓库，2026-03 建仓
+- 10.0k stars：谷歌官方仓库，2026-03 建仓
 - 17 个主题：Compose、相机、媒体、导航、性能、Play、安全、测试、Wear、TV、XR 等
 - 只做难的部分：官方明确不覆盖模型已经很擅长的领域
 - 开放标准：遵循 agentskills.io 的 SKILL.md 规范
@@ -50,7 +50,7 @@ Android Skills 是开源的9.9k stars，Apache-2.0，谷歌官方维护的 Andro
 
 | 优点 | 说明 |
 |---|---|
-| 9.9k stars | 谷歌官方维护 |
+| 10.0k stars | 谷歌官方维护 |
 | 17 个主题 | 从 Compose 到 Play 上架全覆盖 |
 | 官方文档口径 | 内容来自 developer.android.com |
 | 标准格式 | 遵循 agentskills.io 规范 |
@@ -65,7 +65,7 @@ Android Skills 是开源的9.9k stars，Apache-2.0，谷歌官方维护的 Andro
 | 不接收外部贡献 | 定制只能自己 fork |
 | 偏实践规范 | 不替代官方文档 |
 
-> 以上基于官方文档与社区反馈整理（2026-10-27），以官方最新文档为准。
+> 以上基于官方文档与社区反馈整理（2026-10-28），以官方最新文档为准。
 
 ## 快速部署（官方方式）
 
@@ -83,7 +83,7 @@ echo "安装完成：在对话里直接提需求，Agent 会自动匹配技能"
 
 | 场景 | 状态 |
 |---|---|
-| 仓库元数据核对：9,929 stars、641 forks、Apache-2.0、2026-03-16 建仓 | 已核对 2026-10-27 |
+| 仓库元数据核对：9,955 stars、641 forks、Apache-2.0、2026-03-16 建仓 | 已核对 2026-10-28 |
 | GitHub Trending 周榜 +873 | 已核对 2026-10-27 |
 | 仓库根目录确认 17 个技能目录（camera / performance / navigation / testing / play 等） | 已核对 2026-10-27 |
 | README 确认官方安装方式为 `android skills add --all`，也支持 Claude Code / Codex 插件市场 | 已核对 2026-10-27 |
@@ -96,7 +96,7 @@ echo "安装完成：在对话里直接提需求，Agent 会自动匹配技能"
 
 Android Skills 不是 MCP server，是 Agent 技能集合；本仓库只负责安装，不注册 MCP。
 
-本仓库自带一个零依赖的 MCP server（`mcp-server.mjs`），读取同目录的 `guide.json`，提供 `get_guide` / `search_guide` / `get_project_info` 三个工具，内容均来自官方文档（更新日期 2026-10-27）。
+本仓库自带一个零依赖的 MCP server（`mcp-server.mjs`），读取同目录的 `guide.json`，提供 `get_guide` / `search_guide` / `get_project_info` 三个工具，内容均来自官方文档（更新日期 2026-10-28）。
 
 **在百度搭子里接入**：客户端不扫描仓库里的配置文件，需要由百度搭子通过工作区的 MCP 注册接口注册，并且必须使用**绝对路径**（运行时的工作目录是会话目录，不是仓库目录）：
 
@@ -174,5 +174,5 @@ android skills update --all
 ## 免责声明
 
 本仓库为第三方指南，与 Android Skills 官方无隶属关系，不代表官方立场。
-教程基于官方文档编写（更新日期：2026-10-27），项目迭代快，请以[官方文档](https://developer.android.com/tools/agents/android-skills)为准。
+教程基于官方文档编写（更新日期：2026-10-28），项目迭代快，请以[官方文档](https://developer.android.com/tools/agents/android-skills)为准。
 因使用本教程产生的部署问题，请先在官方仓库的 issue 中检索。

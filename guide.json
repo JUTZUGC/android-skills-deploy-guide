@@ -5,13 +5,13 @@
     "key": "android-skills",
     "nameCn": "Android Skills",
     "repoName": "android-skills-deploy-guide",
-    "oneLiner": "9.9k stars，Apache-2.0，谷歌官方维护的 Android Agent 技能库，覆盖 Compose、相机、性能与上架",
+    "oneLiner": "10.0k stars，Apache-2.0，谷歌官方维护的 Android Agent 技能库，覆盖 Compose、相机、性能与上架",
     "officialRepo": "https://github.com/android/skills",
     "officialDocs": "https://developer.android.com/tools/agents/android-skills",
-    "stars": "9.9k",
+    "stars": "10.0k",
     "license": "Apache-2.0",
     "highlights": [
-      "9.9k stars：谷歌官方仓库，2026-03 建仓",
+      "10.0k stars：谷歌官方仓库，2026-03 建仓",
       "17 个主题：Compose、相机、媒体、导航、性能、Play、安全、测试、Wear、TV、XR 等",
       "只做难的部分：官方明确不覆盖模型已经很擅长的领域",
       "开放标准：遵循 agentskills.io 的 SKILL.md 规范",
@@ -21,11 +21,11 @@
     "mcpSupport": "Android Skills 不是 MCP server，是 Agent 技能集合；本仓库只负责安装，不注册 MCP。",
     "webuiUrl": "",
     "adapterPorts": "",
-    "collectedAt": "2026-10-27",
+    "collectedAt": "2026-10-28",
     "verification": [
       [
-        "仓库元数据核对：9,929 stars、641 forks、Apache-2.0、2026-03-16 建仓",
-        "已核对 2026-10-27"
+        "仓库元数据核对：9,955 stars、641 forks、Apache-2.0、2026-03-16 建仓",
+        "已核对 2026-10-28"
       ],
       [
         "GitHub Trending 周榜 +873",

@@ -2,7 +2,7 @@
 set -euo pipefail
 # Android Skills 技能包安装脚本（第三方指南）——按官方文档封装
 # 官方文档：https://developer.android.com/tools/agents/android-skills
-# 更新日期：2026-10-27
+# 更新日期：2026-10-28
 # 类型：script
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
